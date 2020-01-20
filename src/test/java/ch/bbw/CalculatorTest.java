@@ -94,7 +94,11 @@ public class CalculatorTest {
     }
     @Test
     public void testUnexpectedExceptionDivision() throws ArithmeticException{
-        assertTrue(testee.division(5, 0) ==6);
+        try {
+            assertTrue(testee.division(5, 0) == 6);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     @Test
     public void testDivisionTwoPositiveIsOk(){
