@@ -34,4 +34,8 @@ public class CalculatorTest {
         //Added single Test in Method
         assertTrue(testee.subtraktion(-10, -25) == 15);
     }
+    @Test(expected=ArithmeticException.class)
+    public void testExpectedExcpetionDivision(){
+        assertTrue(testee.division(2, 0) ==0);
+    }
 }
