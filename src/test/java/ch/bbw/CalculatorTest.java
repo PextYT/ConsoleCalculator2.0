@@ -2,6 +2,7 @@ package ch.bbw;
 
 import static org.junit.Assert.assertTrue;
 
+//import com.dp4j.TestPrivates;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -47,4 +48,22 @@ public class CalculatorTest {
     public void testUnexpectedExceptionDivision() throws ArithmeticException{
         assertTrue(testee.division(5, 0) ==6);
     }
+
+    //PROTECTED AND PRIVATE METHOD TEST
+    @Test
+    public void testProtectedMethod(){
+        assertTrue(testee.protectedMethod(3, 4) == 7);
+    }
+    /*
+    DOESNT WORK I DONT KNOW WHY, I TRIED ADD Dp4j IN POM.XML
+    AND IMPORTED IT ERROR:
+    Error:java: java.lang.NoSuchFieldError: booleanType
+
+    @Test
+    @TestPrivates
+    public void testPrivateMethod() {
+        assertTrue(testee.privateMethod(2, 2)== 4);
+    }
+
+     */
 }
