@@ -2,15 +2,14 @@ language: java
 sudo: false
 script: mvn install
 before_deploy:
-  # Set up git user name and tag this commit
-  - git config --local user.name "PextYT"
-  - git config --local user.email "merlin@hoengg.com"
-  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-  - git tag $TRAVIS_TAG
+      - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+      - git tag $TRAVIS_TAG
 deploy:
   provider: releases
   api_key:
     secure: Fd4oUHnig/oGMKfEO4e35JJlOr3PASfrcuKpsnWH7qbNo1M1VTImGNC0SHlG3D+nwoatguIbOQ3+G9YWxmbkf9Ga9azA7hrISmZBewBLUNG72TgXMpUWPBiaYKaEgR/Jaj8rOBmlhV1FVxegGKizY6tkd8ILbV5+0VzvqAvosXcqO2+ayd3xW/C9meJ00fFIOQulnsQE1m/RwmRotb1kPWeKt8oapuzITleDjqTPFNTRTZY9ZCaJgn/PtY/yxyjRwy97I0BGzWV3mYGbLSVVCny8VsIHH2usmlkDatiW5yz3g1j2XXqcVW1ZXXxyqDZ1niJidH2TJxSGBpXBVEQdQqUD27MUV885R+hya3VxMPemRGyyKlFmAunBKP7djOkiPn0j3JtUZ2YWDVQ0uchn9X7ulXSN+XA1WtHXl5t12k/ifqZ33WhX1ZSOfUauf0biUmLYZMJM3AXWa8JL5NpPCu5wMOScvt/0amsBhDFC6JpwHDb2Gs3D5uMAV+I8z1cFhnan+NGvBHPeZ39zIRpOI6KmUkG8MiFveNj2ZmtgY2oJxx2zYthgeAdpv3JMHFwt1ONRsxN9hePJ5KXWu9aYOsCGZ90zAo9PuRGezkOlSnPb5xovuLDvOs3NJyQknK5Od3ZVpwZ7+tIMPlk4vjDTsddLlOOATLncSiLqgJEObjk=
-  file: /home/travis/.m2/repository/ch/bbw/02_ConsoleCalculatorWithMaven/0.0.1-SNAPSHOT/02_ConsoleCalculatorWithMaven-0.0.1-SNAPSHOT.jar
+  file: "/home/travis/.m2/repository/ch/bbw/02_ConsoleCalculatorWithMaven/0.0.1-SNAPSHOT/02_ConsoleCalculatorWithMaven-0.0.1-SNAPSHOT.jar"
+  skip_cleanup: true
   on:
     repo: PextYT/ConsoleCalculator2.0
+    all_branches: true
