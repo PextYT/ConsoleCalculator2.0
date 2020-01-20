@@ -1,4 +1,10 @@
 package ch.bbw;
+/**
+ *
+ * @Author Merlin Stocker
+ * @Date Januar 2020
+ *
+ */
 
 public class Calculator {
     public int summe(int summand1, int summand2) {

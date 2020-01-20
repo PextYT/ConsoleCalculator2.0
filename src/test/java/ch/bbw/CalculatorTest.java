@@ -8,7 +8,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Unit test for simple App.
+ *
+ * @Author Merlin Stocker
+ * @Date Januar 2020
+ *
  */
 public class CalculatorTest {
     Calculator testee;

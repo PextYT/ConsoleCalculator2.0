@@ -1,7 +1,9 @@
 package ch.bbw;
 
 /**
- * Hello world!
+ *
+ * @Author Merlin Stocker
+ * @Date Januar 2020
  *
  */
 public class App 
