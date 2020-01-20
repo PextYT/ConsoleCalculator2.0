@@ -20,11 +20,11 @@ public class CalculatorTest {
 
     //SUMME TESTS
     @Test
-    public void testSummeZweiPositiveIsOk(){
+    public void testAdditionZweiPositiveIsOk(){
         assertTrue(testee.summe(10, 25) == 35);
     }
     @Test
-    public void testSummeZweiNegativeIsOk(){
+    public void testAdditionZweiNegativeIsOk(){
         assertTrue(testee.summe(-10, -25) == -35);
     }
     @Test
@@ -33,7 +33,7 @@ public class CalculatorTest {
     }
     @Test
     public void testAdditionPositiveNullIsOk(){
-        assertTrue(testee.summe(9, 0) == 3);
+        assertTrue(testee.summe(9, 0) == 9);
     }
     @Test
     public void testAdditionMAX_VALUEIsOk(){
@@ -96,6 +96,30 @@ public class CalculatorTest {
     public void testUnexpectedExceptionDivision() throws ArithmeticException{
         assertTrue(testee.division(5, 0) ==6);
     }
+    @Test
+    public void testDivisionTwoPositiveIsOk(){
+        assertTrue(testee.division(45, 5) ==9);
+    }
+    @Test
+    public void testSubtractionTwoNegativeIsOk(){
+        assertTrue(testee.division(-36, -9) ==4);
+    }
+    @Test
+    public void testDivisionTwoPositiveAndNegativeIsOk(){
+        assertTrue(testee.division(12, -6) == -2);
+    }
+    @Test
+    public void testDivisionMAX_VALUEAndPositiveIsOk(){
+        assertTrue(testee.division(Integer.MAX_VALUE, 4) ==Integer.MAX_VALUE/4);
+    }
+    @Test
+    public void testDivisionMIN_VALUEAndPositive(){
+        assertTrue(testee.division(Integer.MIN_VALUE, 2) ==Integer.MIN_VALUE/2);
+    }
+    @Test
+    public void testDivisionMAX_VALUEAndNegativeIsOk(){
+        assertTrue(testee.division(Integer.MAX_VALUE, -3) == Integer.MAX_VALUE/-3);
+    }
 
     //PROTECTED AND PRIVATE METHOD TEST
     @Test
@@ -103,9 +127,10 @@ public class CalculatorTest {
         assertTrue(testee.protectedMethod(3, 4) == 7);
     }
     /*
-    DOESNT WORK I DONT KNOW WHY, I TRIED ADD Dp4j IN POM.XML
-    AND IMPORTED IT ERROR:
-    Error:java: java.lang.NoSuchFieldError: booleanType
+    //DOESNT WORK I DONT KNOW WHY, I TRIED ADD Dp4j IN POM.XML
+    //AND IMPORTED IT
+    //ERROR:
+    //Error:java: java.lang.NoSuchFieldError: booleanType
 
     @Test
     @TestPrivates
