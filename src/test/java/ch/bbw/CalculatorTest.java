@@ -27,6 +27,30 @@ public class CalculatorTest {
     public void testSummeZweiNegativeIsOk(){
         assertTrue(testee.summe(-10, -25) == -35);
     }
+    @Test
+    public void testAdditionPositivNegativIsOk(){
+        assertTrue(testee.summe(-3, 4) == 1);
+    }
+    @Test
+    public void testAdditionPositiveNullIsOk(){
+        assertTrue(testee.summe(9, 0) == 3);
+    }
+    @Test
+    public void testAdditionMAX_VALUEIsOk(){
+        assertTrue(testee.summe(Integer.MAX_VALUE, 6) == Integer.MAX_VALUE+6);
+    }
+    @Test
+    public void testAdditionMIN_VALUEIsOk(){
+        assertTrue(testee.summe(Integer.MIN_VALUE, 7) == Integer.MIN_VALUE+7);
+    }
+    @Test
+    public void testAdditionMAX_VALUENegativeIsOk(){
+        assertTrue(testee.summe(Integer.MAX_VALUE, -2) == Integer.MAX_VALUE-2);
+    }
+    @Test
+    public void testAditionMIN_VALUEANegativeIsOk(){
+        assertTrue(testee.summe(Integer.MIN_VALUE, -8) == Integer.MIN_VALUE-8);
+    }
 
     //SUBTRAKTION TESTS
     @Test
