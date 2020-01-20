@@ -2,6 +2,7 @@ package ch.bbw;
 
 import static org.junit.Assert.assertTrue;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -30,6 +31,7 @@ public class CalculatorTest {
     }
     @Test
     public void testSubtractionZweiNegativeIsOk(){
+        //Added single Test in Method
         assertTrue(testee.subtraktion(-10, -25) == 15);
     }
 }
