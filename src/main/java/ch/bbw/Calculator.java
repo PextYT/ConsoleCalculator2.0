@@ -13,4 +13,7 @@ public class Calculator {
     protected int protectedMethod(int value1, int value2){
         return value1 + value2;
     }
+    private int privateMethod(int value1, int value2){
+        return value1 + value2;
+    }
 }
