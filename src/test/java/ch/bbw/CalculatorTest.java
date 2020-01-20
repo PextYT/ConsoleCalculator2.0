@@ -47,4 +47,10 @@ public class CalculatorTest {
     public void testUnexpectedExceptionDivision() throws ArithmeticException{
         assertTrue(testee.division(5, 0) ==6);
     }
+
+    //PROTECTED AND PRIVATE METHOD TEST
+    @Test
+    public void testProtectedMethod(){
+        assertTrue(testee.protectedMethod(3, 4) == 7);
+    }
 }

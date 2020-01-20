@@ -10,4 +10,7 @@ public class Calculator {
     public int division(int value1, int value2){
         return value1 / value2;
     }
+    protected int protectedMethod(int value1, int value2){
+        return value1 + value2;
+    }
 }
