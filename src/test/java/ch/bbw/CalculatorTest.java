@@ -92,6 +92,7 @@ public class CalculatorTest {
     public void testExpectedExcpetionDivision(){
         assertTrue(testee.division(2, 0) ==0);
     }
+    //i DONT KNOW WHY THIS ERROR POPS UP
     @Test
     public void testUnexpectedExceptionDivision() throws ArithmeticException{
         try {
