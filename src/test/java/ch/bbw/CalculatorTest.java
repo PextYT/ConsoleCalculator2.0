@@ -62,6 +62,30 @@ public class CalculatorTest {
         //Added single Test in Method
         assertTrue(testee.subtraktion(-10, -25) == 15);
     }
+    @Test
+    public void testSubtractionPositiveAndNegativeIsOk(){
+        assertTrue(testee.subtraktion(-5, 4) ==-9);
+    }
+    @Test
+    public void testSubtractionPositiveNullIsOk(){
+        assertTrue(testee.subtraktion(7, 0) ==7);
+    }
+    @Test
+    public void testSubtractionMAX_VALUEIsOk(){
+        assertTrue(testee.subtraktion(Integer.MAX_VALUE, 56) == Integer.MAX_VALUE-56);
+    }
+    @Test
+    public void testSubtractionMIN_VALUEIsOk(){
+        assertTrue(testee.subtraktion(Integer.MIN_VALUE, 23) == Integer.MIN_VALUE-23);
+    }
+    @Test
+    public void testSubtractionMAX_VALUENegativeIsOk(){
+        assertTrue(testee.subtraktion(Integer.MAX_VALUE, -12) == Integer.MAX_VALUE+12);
+    }
+    @Test
+    public void testSubtractionMIN_VALUEAndNegativeIsOk(){
+        assertTrue(testee.subtraktion(Integer.MIN_VALUE, -78) == Integer.MIN_VALUE+78);
+    }
 
     //DIVISION TESTS
     @Test(expected=ArithmeticException.class)
